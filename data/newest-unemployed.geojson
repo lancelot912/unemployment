@@ -1,0 +1,1305 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.810356,33.520661 ]
+    },
+    "properties": {
+    "State":"AL",
+    "name":"Birmingham",
+    "Unemployed 2010":"52,965",
+    "Rate 2010":9.8,
+    "Unemployed 2012":"37,742",
+    "Rate 2012":7,
+    "Unemployed 2014":"32,009",
+    "Rate 2014":6,
+    "Unemployed 2016":"29,420",
+    "Rate 2016":5.4,
+    "Unemployed 2018":"19,088",
+    "Rate 2018":3.5,
+    "Unemployed 2019":"15,016",
+    "Rate 2019":2.7,
+    "Unemployed Aug2020":"31,017",
+    "Rate Aug2020":5.6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -149.900284,61.218056 ]
+    },
+    "properties": {
+    "State":"AK",
+    "name":"Anchorage",
+    "Unemployed 2010":"14,380",
+    "Rate 2010":7.2,
+    "Unemployed 2012":"12,272",
+    "Rate 2012":6.1,
+    "Unemployed 2014":"11,843",
+    "Rate 2014":5.8,
+    "Unemployed 2016":"12,450",
+    "Rate 2016":6.1,
+    "Unemployed 2018":"11,612",
+    "Rate 2018":5.9,
+    "Unemployed 2019":"10,662",
+    "Rate 2019":5.5,
+    "Unemployed Aug2020":"12,225",
+    "Rate Aug2020":6.6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -112.074036,33.448376 ]
+    },
+    "properties": {
+    "State":"AZ",
+    "name":"Phoenix",
+    "Unemployed 2010":"199,290",
+    "Rate 2010":9.6,
+    "Unemployed 2012":"150,728",
+    "Rate 2012":7.4,
+    "Unemployed 2014":"124,630",
+    "Rate 2014":5.9,
+    "Unemployed 2016":"103,851",
+    "Rate 2016":4.6,
+    "Unemployed 2018":"98,992",
+    "Rate 2018":4.1,
+    "Unemployed 2019":"102,018",
+    "Rate 2019":4.1,
+    "Unemployed Aug2020":"141,735",
+    "Rate Aug2020":5.9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -92.289597,34.746483 ]
+    },
+    "properties": {
+    "State":"AR",
+    "name":"Little Rock",
+    "Unemployed 2010":"24,877",
+    "Rate 2010":7.2,
+    "Unemployed 2012":"23,284",
+    "Rate 2012":6.7,
+    "Unemployed 2014":"18,494",
+    "Rate 2014":5.4,
+    "Unemployed 2016":"12,286",
+    "Rate 2016":3.5,
+    "Unemployed 2018":"11,757",
+    "Rate 2018":3.3,
+    "Unemployed 2019":"11,562",
+    "Rate 2019":3.2,
+    "Unemployed Aug2020":"29,400",
+    "Rate Aug2020":8.4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.243683,34.052235 ]
+    },
+    "properties": {
+    "State":"CA",
+    "name":"Los Angeles",
+    "Unemployed 2010":"615,101",
+    "Rate 2010":12.5,
+    "Unemployed 2012":"536,871",
+    "Rate 2012":10.9,
+    "Unemployed 2014":"412,299",
+    "Rate 2014":8.3,
+    "Unemployed 2016":"264,609",
+    "Rate 2016":5.3,
+    "Unemployed 2018":"235,195",
+    "Rate 2018":4.6,
+    "Unemployed 2019":"227,288",
+    "Rate 2019":4.4,
+    "Unemployed Aug2020":"818,251",
+    "Rate Aug2020":16.6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -104.984718,39.737567 ]
+    },
+    "properties": {
+    "State":"CO",
+    "name":"Denver",
+    "Unemployed 2010":"123,630",
+    "Rate 2010":8.7,
+    "Unemployed 2012":"112,015",
+    "Rate 2012":7.7,
+    "Unemployed 2014":"71,613",
+    "Rate 2014":4.8,
+    "Unemployed 2016":"47,564",
+    "Rate 2016":3.1,
+    "Unemployed 2018":"49,702",
+    "Rate 2018":3,
+    "Unemployed 2019":"44,452",
+    "Rate 2019":2.7,
+    "Unemployed Aug2020":"117,936",
+    "Rate Aug2020":7
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.204835,41.167041 ]
+    },
+    "properties": {
+    "State":"CT",
+    "name":"Bridgeport",
+    "Unemployed 2010":"40,285",
+    "Rate 2010":8.7,
+    "Unemployed 2012":"36,846",
+    "Rate 2012":8,
+    "Unemployed 2014":"29,636",
+    "Rate 2014":6.4,
+    "Unemployed 2016":"23,454",
+    "Rate 2016":5,
+    "Unemployed 2018":"19,187",
+    "Rate 2018":4.1,
+    "Unemployed 2019":"17,453",
+    "Rate 2019":3.7,
+    "Unemployed Aug2020":"38,196",
+    "Rate Aug2020":8.5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.546667,39.745833 ]
+    },
+    "properties": {
+    "State":"DE",
+    "name":"Wilmington",
+    "Unemployed 2010":"31,122",
+    "Rate 2010":8.7,
+    "Unemployed 2012":"27,615",
+    "Rate 2012":7.6,
+    "Unemployed 2014":"21,685",
+    "Rate 2014":5.9,
+    "Unemployed 2016":"17,683",
+    "Rate 2016":4.7,
+    "Unemployed 2018":"14,886",
+    "Rate 2018":3.9,
+    "Unemployed 2019":"14,587",
+    "Rate 2019":3.8,
+    "Unemployed Aug2020":"34,947",
+    "Rate Aug2020":9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.036366,38.895112 ]
+    },
+    "properties": {
+    "State":"DC",
+    "name":"District of Columbia",
+    "Unemployed 2010":"161,399",
+    "Rate 2010":6.5,
+    "Unemployed 2012":"151,775",
+    "Rate 2012":5.9,
+    "Unemployed 2014":"135,821",
+    "Rate 2014":5.2,
+    "Unemployed 2016":"106,171",
+    "Rate 2016":4,
+    "Unemployed 2018":"91,936",
+    "Rate 2018":3.4,
+    "Unemployed 2019":"86,813",
+    "Rate 2019":3.1,
+    "Unemployed Aug2020":"188,107",
+    "Rate Aug2020":6.9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.655651,30.332184 ]
+    },
+    "properties": {
+    "State":"FL",
+    "name":"Jacksonville",
+    "Unemployed 2010":"74,912",
+    "Rate 2010":10.7,
+    "Unemployed 2012":"57,720",
+    "Rate 2012":8.2,
+    "Unemployed 2014":"44,622",
+    "Rate 2014":6.2,
+    "Unemployed 2016":"34,037",
+    "Rate 2016":4.6,
+    "Unemployed 2018":"26,784",
+    "Rate 2018":3.5,
+    "Unemployed 2019":"24,379",
+    "Rate 2019":3.1,
+    "Unemployed Aug2020":"44,948",
+    "Rate Aug2020":5.8
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.387982,33.748995 ]
+    },
+    "properties": {
+    "State":"GA",
+    "name":"Atlanta",
+    "Unemployed 2010":"280,007",
+    "Rate 2010":10.3,
+    "Unemployed 2012":"245,528",
+    "Rate 2012":8.8,
+    "Unemployed 2014":"188,394",
+    "Rate 2014":6.7,
+    "Unemployed 2016":"150,406",
+    "Rate 2016":5.1,
+    "Unemployed 2018":"115,679",
+    "Rate 2018":3.8,
+    "Unemployed 2019":"100,428",
+    "Rate 2019":3.2,
+    "Unemployed Aug2020":"187,152",
+    "Rate Aug2020":6.3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -157.858333,21.306944 ]
+    },
+    "properties": {
+    "State":"HI",
+    "name":"Honolulu",
+    "Unemployed 2010":"26,560",
+    "Rate 2010":6,
+    "Unemployed 2012":"24,149",
+    "Rate 2012":5.4,
+    "Unemployed 2014":"18,736",
+    "Rate 2014":4.1,
+    "Unemployed 2016":"13,009",
+    "Rate 2016":2.8,
+    "Unemployed 2018":"11,053",
+    "Rate 2018":2.4,
+    "Unemployed 2019":"11,626",
+    "Rate 2019":2.6,
+    "Unemployed Aug2020":"45,634",
+    "Rate Aug2020":10.6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.202314,43.615019 ]
+    },
+    "properties": {
+    "State":"ID",
+    "name":"Boise",
+    "Unemployed 2010":"27,312",
+    "Rate 2010":9.2,
+    "Unemployed 2012":"12,639",
+    "Rate 2012":6.2,
+    "Unemployed 2014":"8,778",
+    "Rate 2014":4.1,
+    "Unemployed 2016":"7,428",
+    "Rate 2016":3.3,
+    "Unemployed 2018":"6,191",
+    "Rate 2018":2.5,
+    "Unemployed 2019":"6,369",
+    "Rate 2019":2.5,
+    "Unemployed Aug2020":"15,719",
+    "Rate Aug2020":4.1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.629798,41.878114 ]
+    },
+    "properties": {
+    "State":"IL",
+    "name":"Chicago",
+    "Unemployed 2010":"398,895",
+    "Rate 2010":10.6,
+    "Unemployed 2012":"351,538",
+    "Rate 2012":9.3,
+    "Unemployed 2014":"273,423",
+    "Rate 2014":7.2,
+    "Unemployed 2016":"220,621",
+    "Rate 2016":5.8,
+    "Unemployed 2018":"148,718",
+    "Rate 2018":4,
+    "Unemployed 2019":"135,581",
+    "Rate 2019":3.6,
+    "Unemployed Aug2020":"455,214",
+    "Rate Aug2020":12.6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.158068,39.768403 ]
+    },
+    "properties": {
+    "State":"IN",
+    "name":"Indianapolis",
+    "Unemployed 2010":"91,215",
+    "Rate 2010":9.6,
+    "Unemployed 2012":"77,469",
+    "Rate 2012":8,
+    "Unemployed 2014":"56,721",
+    "Rate 2014":5.7,
+    "Unemployed 2016":"42,166",
+    "Rate 2016":4.1,
+    "Unemployed 2018":"34,884",
+    "Rate 2018":3.3,
+    "Unemployed 2019":"32,316",
+    "Rate 2019":3,
+    "Unemployed Aug2020":"71,094",
+    "Rate Aug2020":6.5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.624959,41.586835 ]
+    },
+    "properties": {
+    "State":"IA",
+    "name":"Des Moines",
+    "Unemployed 2010":"18,708",
+    "Rate 2010":5.8,
+    "Unemployed 2012":"16,180",
+    "Rate 2012":5,
+    "Unemployed 2014":"13,878",
+    "Rate 2014":4.1,
+    "Unemployed 2016":"11,477",
+    "Rate 2016":3.3,
+    "Unemployed 2018":"8,954",
+    "Rate 2018":2.5,
+    "Unemployed 2019":"9,958",
+    "Rate 2019":2.7,
+    "Unemployed Aug2020":"22,537",
+    "Rate Aug2020":6.5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.330053,37.687176 ]
+    },
+    "properties": {
+    "State":"KS",
+    "name":"Wichita",
+    "Unemployed 2010":"27,384",
+    "Rate 2010":8.6,
+    "Unemployed 2012":"20,864",
+    "Rate 2012":6.7,
+    "Unemployed 2014":"16,228",
+    "Rate 2014":5.2,
+    "Unemployed 2016":"14,177",
+    "Rate 2016":4.6,
+    "Unemployed 2018":"11,222",
+    "Rate 2018":3.6,
+    "Unemployed 2019":"10,696",
+    "Rate 2019":3.4,
+    "Unemployed Aug2020":"32,897",
+    "Rate Aug2020":10.2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -85.758456,38.252665 ]
+    },
+    "properties": {
+    "State":"KY",
+    "name":"Louisville",
+    "Unemployed 2010":"62,000",
+    "Rate 2010":9.9,
+    "Unemployed 2012":"48,996",
+    "Rate 2012":7.8,
+    "Unemployed 2014":"36,522",
+    "Rate 2014":5.8,
+    "Unemployed 2016":"27,884",
+    "Rate 2016":4.3,
+    "Unemployed 2018":"25,943",
+    "Rate 2018":3.9,
+    "Unemployed 2019":"25,604",
+    "Rate 2019":3.8,
+    "Unemployed Aug2020":"47,319",
+    "Rate Aug2020":7.1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.071532,29.951066 ]
+    },
+    "properties": {
+    "State":"LA",
+    "name":"New Orleans",
+    "Unemployed 2010":"44,220",
+    "Rate 2010":7.7,
+    "Unemployed 2012":"40,440",
+    "Rate 2012":7.1,
+    "Unemployed 2014":"37,932",
+    "Rate 2014":6.3,
+    "Unemployed 2016":"32,989",
+    "Rate 2016":5.5,
+    "Unemployed 2018":"27,480",
+    "Rate 2018":4.6,
+    "Unemployed 2019":"26,751",
+    "Rate 2019":4.5,
+    "Unemployed Aug2020":"57,100",
+    "Rate Aug2020":9.7
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.255326,43.661471 ]
+    },
+    "properties": {
+    "State":"ME",
+    "name":"Portland",
+    "Unemployed 2010":"13,382",
+    "Rate 2010":6.8,
+    "Unemployed 2012":"12,450",
+    "Rate 2012":6.2,
+    "Unemployed 2014":"9,131",
+    "Rate 2014":4.5,
+    "Unemployed 2016":"6,038",
+    "Rate 2016":3,
+    "Unemployed 2018":"5,474",
+    "Rate 2018":2.6,
+    "Unemployed 2019":"5,088",
+    "Rate 2019":2.4,
+    "Unemployed Aug2020":"13,045",
+    "Rate Aug2020":6.3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.612189,39.290385 ]
+    },
+    "properties": {
+    "State":"MD",
+    "name":"Baltimore",
+    "Unemployed 2010":"116,058",
+    "Rate 2010":8.1,
+    "Unemployed 2012":"105,281",
+    "Rate 2012":7.2,
+    "Unemployed 2014":"87,909",
+    "Rate 2014":6,
+    "Unemployed 2016":"67,843",
+    "Rate 2016":4.6,
+    "Unemployed 2018":"60,232",
+    "Rate 2018":4,
+    "Unemployed 2019":"55,093",
+    "Rate 2019":3.6,
+    "Unemployed Aug2020":"102,664",
+    "Rate Aug2020":6.8
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.05888,42.360083 ]
+    },
+    "properties": {
+    "State":"MA",
+    "name":"Boston",
+    "Unemployed 2010":"107,673",
+    "Rate 2010":7.2,
+    "Unemployed 2012":"84,269",
+    "Rate 2012":5.6,
+    "Unemployed 2014":"75,633",
+    "Rate 2014":4.9,
+    "Unemployed 2016":"52,047",
+    "Rate 2016":3.3,
+    "Unemployed 2018":"47,718",
+    "Rate 2018":2.9,
+    "Unemployed 2019":"41,195",
+    "Rate 2019":2.4,
+    "Unemployed Aug2020":"285,575",
+    "Rate Aug2020":10.8
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.045754,42.331427 ]
+    },
+    "properties": {
+    "State":"MI",
+    "name":"Detroit",
+    "Unemployed 2010":"137,127",
+    "Rate 2010":7.3,
+    "Unemployed 2012":"103,344",
+    "Rate 2012":5.5,
+    "Unemployed 2014":"75,790",
+    "Rate 2014":4,
+    "Unemployed 2016":"69,215",
+    "Rate 2016":3.5,
+    "Unemployed 2018":"53,887",
+    "Rate 2018":2.7,
+    "Unemployed 2019":"60,180",
+    "Rate 2019":3,
+    "Unemployed Aug2020":"101,556",
+    "Rate Aug2020":12.9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.265011,44.977753 ]
+    },
+    "properties": {
+    "State":"MN",
+    "name":"Minneapolis",
+    "Unemployed 2010":"45,597",
+    "Rate 2010":7,
+    "Unemployed 2012":"34,502",
+    "Rate 2012":5.2,
+    "Unemployed 2014":"25,421",
+    "Rate 2014":3.8,
+    "Unemployed 2016":"22,891",
+    "Rate 2016":3.3,
+    "Unemployed 2018":"17,664",
+    "Rate 2018":2.5,
+    "Unemployed 2019":"19,676",
+    "Rate 2019":2.8,
+    "Unemployed Aug2020":"160,134",
+    "Rate Aug2020":7.9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.18481,32.298757 ]
+    },
+    "properties": {
+    "State":"MS",
+    "name":"Jackson",
+    "Unemployed 2010":"23,291",
+    "Rate 2010":8.7,
+    "Unemployed 2012":"20,837",
+    "Rate 2012":7.7,
+    "Unemployed 2014":"16,322",
+    "Rate 2014":6.3,
+    "Unemployed 2016":"13,208",
+    "Rate 2016":4.9,
+    "Unemployed 2018":"11,350",
+    "Rate 2018":4.2,
+    "Unemployed 2019":"12,850",
+    "Rate 2019":4.8,
+    "Unemployed Aug2020":"18,230",
+    "Rate Aug2020":7
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.578567,39.099727 ]
+    },
+    "properties": {
+    "State":"MO",
+    "name":"Kansas City",
+    "Unemployed 2010":"94,152",
+    "Rate 2010":8.7,
+    "Unemployed 2012":"69,911",
+    "Rate 2012":6.5,
+    "Unemployed 2014":"61,593",
+    "Rate 2014":5.6,
+    "Unemployed 2016":"48,124",
+    "Rate 2016":4.3,
+    "Unemployed 2018":"37,520",
+    "Rate 2018":3.3,
+    "Unemployed 2019":"37,109",
+    "Rate 2019":3.3,
+    "Unemployed Aug2020":"82,805",
+    "Rate Aug2020":7.3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -108.50069,45.783286 ]
+    },
+    "properties": {
+    "State":"MT",
+    "name":"Billings",
+    "Unemployed 2010":"4,865",
+    "Rate 2010":5.9,
+    "Unemployed 2012":"3,881",
+    "Rate 2012":4.6,
+    "Unemployed 2014":"3,181",
+    "Rate 2014":3.7,
+    "Unemployed 2016":"3,152",
+    "Rate 2016":3.6,
+    "Unemployed 2018":"2,864",
+    "Rate 2018":3.3,
+    "Unemployed 2019":"2,812",
+    "Rate 2019":3.2,
+    "Unemployed Aug2020":"4,393",
+    "Rate Aug2020":4.9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.934503,41.256537 ]
+    },
+    "properties": {
+    "State":"NE",
+    "name":"Omaha",
+    "Unemployed 2010":"23,631",
+    "Rate 2010":5.1,
+    "Unemployed 2012":"20,846",
+    "Rate 2012":4.4,
+    "Unemployed 2014":"17,126",
+    "Rate 2014":3.6,
+    "Unemployed 2016":"15,490",
+    "Rate 2016":3.2,
+    "Unemployed 2018":"14,671",
+    "Rate 2018":3,
+    "Unemployed 2019":"15,217",
+    "Rate 2019":3.1,
+    "Unemployed Aug2020":"22,526",
+    "Rate Aug2020":4.5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.13983,36.169941 ]
+    },
+    "properties": {
+    "State":"NV",
+    "name":"Las Vegas",
+    "Unemployed 2010":"135,431",
+    "Rate 2010":13.8,
+    "Unemployed 2012":"112,499",
+    "Rate 2012":11.3,
+    "Unemployed 2014":"81,124",
+    "Rate 2014":8,
+    "Unemployed 2016":"61,027",
+    "Rate 2016":5.8,
+    "Unemployed 2018":"51,401",
+    "Rate 2018":4.7,
+    "Unemployed 2019":"45,758",
+    "Rate 2019":4,
+    "Unemployed Aug2020":"170,575",
+    "Rate Aug2020":15.5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.454789,42.99564 ]
+    },
+    "properties": {
+    "State":"NH",
+    "name":"Manchester",
+    "Unemployed 2010":"6,849",
+    "Rate 2010":6.1,
+    "Unemployed 2012":"6,369",
+    "Rate 2012":5.6,
+    "Unemployed 2014":"4,836",
+    "Rate 2014":4.2,
+    "Unemployed 2016":"3,277",
+    "Rate 2016":2.8,
+    "Unemployed 2018":"2,928",
+    "Rate 2018":2.4,
+    "Unemployed 2019":"6,363",
+    "Rate 2019":2.6,
+    "Unemployed Aug2020":"7,681",
+    "Rate Aug2020":6.4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.172367,40.735657 ]
+    },
+    "properties": {
+    "State":"NJ",
+    "name":"Newark",
+    "Unemployed 2010":"116,215",
+    "Rate 2010":9.1,
+    "Unemployed 2012":"114,773",
+    "Rate 2012":8.9,
+    "Unemployed 2014":"81,497",
+    "Rate 2014":6.5,
+    "Unemployed 2016":"60,998",
+    "Rate 2016":4.9,
+    "Unemployed 2018":"50,497",
+    "Rate 2018":4.1,
+    "Unemployed 2019":"44,715",
+    "Rate 2019":3.6,
+    "Unemployed Aug2020":"136,324",
+    "Rate Aug2020":10.9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.650422,35.084386 ]
+    },
+    "properties": {
+    "State":"NM",
+    "name":"Albuquerque",
+    "Unemployed 2010":"34,021",
+    "Rate 2010":8,
+    "Unemployed 2012":"29,753",
+    "Rate 2012":7.1,
+    "Unemployed 2014":"27,274",
+    "Rate 2014":6.5,
+    "Unemployed 2016":"25,556",
+    "Rate 2016":6,
+    "Unemployed 2018":"19,894",
+    "Rate 2018":4.6,
+    "Unemployed 2019":"20,046",
+    "Rate 2019":4.6,
+    "Unemployed Aug2020":"45,841",
+    "Rate Aug2020":11.2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.005941,40.712784 ]
+    },
+    "properties": {
+    "State":"NY",
+    "name":"New York City",
+    "Unemployed 2010":"632,632",
+    "Rate 2010":9.2,
+    "Unemployed 2012":"627,843",
+    "Rate 2012":9,
+    "Unemployed 2014":"472,934",
+    "Rate 2014":6.8,
+    "Unemployed 2016":"348,468",
+    "Rate 2016":5,
+    "Unemployed 2018":"283,669",
+    "Rate 2018":4.1,
+    "Unemployed 2019":"261,996",
+    "Rate 2019":3.7,
+    "Unemployed Aug2020":"980,422",
+    "Rate Aug2020":14
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.843127,35.227087 ]
+    },
+    "properties": {
+    "State":"NC",
+    "name":"Charlotte",
+    "Unemployed 2010":"130,927",
+    "Rate 2010":11.5,
+    "Unemployed 2012":"108,650",
+    "Rate 2012":9.3,
+    "Unemployed 2014":"74,407",
+    "Rate 2014":6.2,
+    "Unemployed 2016":"61,583",
+    "Rate 2016":4.8,
+    "Unemployed 2018":"49,772",
+    "Rate 2018":3.7,
+    "Unemployed 2019":"22,786",
+    "Rate 2019":3.6,
+    "Unemployed Aug2020":"94,230",
+    "Rate Aug2020":7.2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.789803,46.877186 ]
+    },
+    "properties": {
+    "State":"ND",
+    "name":"Fargo",
+    "Unemployed 2010":"5,018",
+    "Rate 2010":4.1,
+    "Unemployed 2012":"4,318",
+    "Rate 2012":3.5,
+    "Unemployed 2014":"3,438",
+    "Rate 2014":2.7,
+    "Unemployed 2016":"3,464",
+    "Rate 2016":2.5,
+    "Unemployed 2018":"3,327",
+    "Rate 2018":2.4,
+    "Unemployed 2019":"3,181",
+    "Rate 2019":2.3,
+    "Unemployed Aug2020":"5,518",
+    "Rate Aug2020":3.9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.998794,39.961176 ]
+    },
+    "properties": {
+    "State":"OH",
+    "name":"Columbus",
+    "Unemployed 2010":"90,418",
+    "Rate 2010":9,
+    "Unemployed 2012":"64,913",
+    "Rate 2012":6.5,
+    "Unemployed 2014":"50,816",
+    "Rate 2014":4.9,
+    "Unemployed 2016":"44,407",
+    "Rate 2016":4.2,
+    "Unemployed 2018":"41,863",
+    "Rate 2018":3.9,
+    "Unemployed 2019":"39,116",
+    "Rate 2019":3.6,
+    "Unemployed Aug2020":"91,000",
+    "Rate Aug2020":8.3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.516428,35.46756 ]
+    },
+    "properties": {
+    "State":"OK",
+    "name":"Oklahoma City",
+    "Unemployed 2010":"36,554",
+    "Rate 2010":5.9,
+    "Unemployed 2012":"29,236",
+    "Rate 2012":4.5,
+    "Unemployed 2014":"26,002",
+    "Rate 2014":4,
+    "Unemployed 2016":"27,930",
+    "Rate 2016":4.2,
+    "Unemployed 2018":"21,537",
+    "Rate 2018":3.2,
+    "Unemployed 2019":"20,814",
+    "Rate 2019":3,
+    "Unemployed Aug2020":"37,896",
+    "Rate Aug2020":5.5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.676207,45.523452 ]
+    },
+    "properties": {
+    "State":"OR",
+    "name":"Portland",
+    "Unemployed 2010":"123,713",
+    "Rate 2010":10.2,
+    "Unemployed 2012":"95,636",
+    "Rate 2012":8,
+    "Unemployed 2014":"73,586",
+    "Rate 2014":6.1,
+    "Unemployed 2016":"58,521",
+    "Rate 2016":4.6,
+    "Unemployed 2018":"50,188",
+    "Rate 2018":3.8,
+    "Unemployed 2019":"47,037",
+    "Rate 2019":3.5,
+    "Unemployed Aug2020":"110,462",
+    "Rate Aug2020":8.4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.165222,39.952584 ]
+    },
+    "properties": {
+    "State":"PA",
+    "name":"Philadelphia",
+    "Unemployed 2010":"95,636",
+    "Rate 2010":9.8,
+    "Unemployed 2012":"98,367",
+    "Rate 2012":9.9,
+    "Unemployed 2014":"71,964",
+    "Rate 2014":7.3,
+    "Unemployed 2016":"61,751",
+    "Rate 2016":6.2,
+    "Unemployed 2018":"50,691",
+    "Rate 2018":5,
+    "Unemployed 2019":"52,198",
+    "Rate 2019":5.1,
+    "Unemployed Aug2020":"144,848",
+    "Rate Aug2020":14.1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -94.127431,36.311004 ]
+    },
+    "properties": {
+    "State":"RI",
+    "name":"Providence",
+    "Unemployed 2010":"76,695",
+    "Rate 2010":11.1,
+    "Unemployed 2012":"68,210",
+    "Rate 2012":10,
+    "Unemployed 2014":"51,354",
+    "Rate 2014":7.5,
+    "Unemployed 2016":"34,537",
+    "Rate 2016":5.1,
+    "Unemployed 2018":"27,598",
+    "Rate 2018":4,
+    "Unemployed 2019":"24,736",
+    "Rate 2019":3.6,
+    "Unemployed Aug2020":"85,378",
+    "Rate Aug2020":12.6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.931051,32.776475 ]
+    },
+    "properties": {
+    "State":"SC",
+    "name":"Charleston",
+    "Unemployed 2010":"30,265",
+    "Rate 2010":9.3,
+    "Unemployed 2012":"26,094",
+    "Rate 2012":7.6,
+    "Unemployed 2014":"19516",
+    "Rate 2014":5.5,
+    "Unemployed 2016":"16,120",
+    "Rate 2016":4.3,
+    "Unemployed 2018":"11,282",
+    "Rate 2018":2.9,
+    "Unemployed 2019":"9,483",
+    "Rate 2019":2.4,
+    "Unemployed Aug2020":"27,390",
+    "Rate Aug2020":6.8
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -96.728333,43.547303 ]
+    },
+    "properties": {
+    "State":"SD",
+    "name":"Sioux Falls",
+    "Unemployed 2010":"6,347",
+    "Rate 2010":4.8,
+    "Unemployed 2012":"5,185",
+    "Rate 2012":3.8,
+    "Unemployed 2014":"4,084",
+    "Rate 2014":2.9,
+    "Unemployed 2016":"3,644",
+    "Rate 2016":2.5,
+    "Unemployed 2018":"3,962",
+    "Rate 2018":2.6,
+    "Unemployed 2019":"4,358",
+    "Rate 2019":2.8,
+    "Unemployed Aug2020":"6,559",
+    "Rate Aug2020":4.2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -86.781602,36.162664 ]
+    },
+    "properties": {
+    "State":"TN",
+    "name":"Nashville",
+    "Unemployed 2010":"75,866",
+    "Rate 2010":8.6,
+    "Unemployed 2012":"58,052",
+    "Rate 2012":6.4,
+    "Unemployed 2014":"47,505",
+    "Rate 2014":5.2,
+    "Unemployed 2016":"36,310",
+    "Rate 2016":3.7,
+    "Unemployed 2018":"28,891",
+    "Rate 2018":2.8,
+    "Unemployed 2019":"28,582",
+    "Rate 2019":2.6,
+    "Unemployed Aug2020":"90,660",
+    "Rate Aug2020":8.3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.369803,29.760427 ]
+    },
+    "properties": {
+    "State":"TX",
+    "name":"Houston",
+    "Unemployed 2010":"245,481",
+    "Rate 2010":8.3,
+    "Unemployed 2012":"205,441",
+    "Rate 2012":6.6,
+    "Unemployed 2014":"160,374",
+    "Rate 2014":4.9,
+    "Unemployed 2016":"173,728",
+    "Rate 2016":5.3,
+    "Unemployed 2018":"145,524",
+    "Rate 2018":4.3,
+    "Unemployed 2019":"130,043",
+    "Rate 2019":3.8,
+    "Unemployed Aug2020":"282,337",
+    "Rate Aug2020":8.1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.891047,40.760779 ]
+    },
+    "properties": {
+    "State":"UT",
+    "name":"Salt Lake City",
+    "Unemployed 2010":"44,360",
+    "Rate 2010":7.7,
+    "Unemployed 2012":"30,893",
+    "Rate 2012":5.3,
+    "Unemployed 2014":"22,594",
+    "Rate 2014":3.7,
+    "Unemployed 2016":"20,293",
+    "Rate 2016":3.2,
+    "Unemployed 2018":"19,342",
+    "Rate 2018":3,
+    "Unemployed 2019":"16,951",
+    "Rate 2019":2.5,
+    "Unemployed Aug2020":"31,656",
+    "Rate Aug2020":4.7
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.212072,44.475883 ]
+    },
+    "properties": {
+    "State":"VT",
+    "name":"Burlington",
+    "Unemployed 2010":"6,182",
+    "Rate 2010":5,
+    "Unemployed 2012":"4,862",
+    "Rate 2012":3.9,
+    "Unemployed 2014":"3,967",
+    "Rate 2014":3.2,
+    "Unemployed 2016":"3,242",
+    "Rate 2016":2.6,
+    "Unemployed 2018":"2,592",
+    "Rate 2018":2,
+    "Unemployed 2019":"2,381",
+    "Rate 2019":1.9,
+    "Unemployed Aug2020":"5,083",
+    "Rate Aug2020":4.3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -75.977985,36.852926 ]
+    },
+    "properties": {
+    "State":"VA",
+    "name":"Virginia Beach",
+    "Unemployed 2010":"63,270",
+    "Rate 2010":7.6,
+    "Unemployed 2012":"56,908",
+    "Rate 2012":6.8,
+    "Unemployed 2014":"47,968",
+    "Rate 2014":5.7,
+    "Unemployed 2016":"39,010",
+    "Rate 2016":4.7,
+    "Unemployed 2018":"28,261",
+    "Rate 2018":3.3,
+    "Unemployed 2019":"26,607",
+    "Rate 2019":3.1,
+    "Unemployed Aug2020":"63,192",
+    "Rate Aug2020":7.4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.332071,47.60621 ]
+    },
+    "properties": {
+    "State":"WA",
+    "name":"Seattle",
+    "Unemployed 2010":"141,024",
+    "Rate 2010":9.4,
+    "Unemployed 2012":"99,735",
+    "Rate 2012":6.6,
+    "Unemployed 2014":"74,994",
+    "Rate 2014":4.8,
+    "Unemployed 2016":"64,196",
+    "Rate 2016":3.9,
+    "Unemployed 2018":"54,989",
+    "Rate 2018":3.2,
+    "Unemployed 2019":"49,205",
+    "Rate 2019":2.8,
+    "Unemployed Aug2020":"127,701",
+    "Rate Aug2020":7.4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.632623,38.34982 ]
+    },
+    "properties": {
+    "State":"WV",
+    "name":"Charleston",
+    "Unemployed 2010":"8,131",
+    "Rate 2010":7.7,
+    "Unemployed 2012":"7,386",
+    "Rate 2012":7.1,
+    "Unemployed 2014":"6,370",
+    "Rate 2014":6.3,
+    "Unemployed 2016":"5,729",
+    "Rate 2016":5.9,
+    "Unemployed 2018":"4,929",
+    "Rate 2018":5.3,
+    "Unemployed 2019":"4,468",
+    "Rate 2019":4.8,
+    "Unemployed Aug2020":"9,132",
+    "Rate Aug2020":9.9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.906474,43.038903 ]
+    },
+    "properties": {
+    "State":"WI",
+    "name":"Milwaukee",
+    "Unemployed 2010":"73,100",
+    "Rate 2010":8.9,
+    "Unemployed 2012":"60,779",
+    "Rate 2012":7.4,
+    "Unemployed 2014":"48,064",
+    "Rate 2014":5.8,
+    "Unemployed 2016":"35,675",
+    "Rate 2016":4.3,
+    "Unemployed 2018":"26,152",
+    "Rate 2018":3.2,
+    "Unemployed 2019":"28,854",
+    "Rate 2019":3.5,
+    "Unemployed Aug2020":"60,850",
+    "Rate Aug2020":7.4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -104.820246,41.139981 ]
+    },
+    "properties": {
+    "State":"WY",
+    "name":"Cheyenne",
+    "Unemployed 2010":"3,090",
+    "Rate 2010":6.7,
+    "Unemployed 2012":"2,744",
+    "Rate 2012":5.8,
+    "Unemployed 2014":"2,105",
+    "Rate 2014":4.3,
+    "Unemployed 2016":"2,032",
+    "Rate 2016":4.2,
+    "Unemployed 2018":"1,793",
+    "Rate 2018":3.7,
+    "Unemployed 2019":"1,678",
+    "Rate 2019":3.5,
+    "Unemployed Aug2020":"2,498",
+    "Rate Aug2020":5.1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -66.105722,18.466334 ]
+    },
+    "properties": {
+    "State":"PR",
+    "name":"San Juan",
+    "Unemployed 2010":"123,559",
+    "Rate 2010":14.7,
+    "Unemployed 2012":"99,540",
+    "Rate 2012":12.5,
+    "Unemployed 2014":"87,756",
+    "Rate 2014":11.7,
+    "Unemployed 2016":"74,414",
+    "Rate 2016":10,
+    "Unemployed 2018":"56,413",
+    "Rate 2018":7.8,
+    "Unemployed 2019":"49,702",
+    "Rate 2019":6.9,
+    "Unemployed Aug2020":"59,237",
+    "Rate Aug2020":8.3
+    }
+  }
+]
+}
