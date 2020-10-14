@@ -30,7 +30,7 @@
     <!-- Custom Styles -->
     <link rel=stylesheet href="css/range.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/map.css">
+    
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=News+Cycle|Oswald&display=swap" rel="stylesheet">
@@ -75,10 +75,11 @@
                 <div class="slide-container">
                     <input id="slider" type="range" class="range" min="0" max="7" value="0">
                 </div>
-                <h3 id="lblSliderHint" class="sliderHint">Adjust slider to change date</h3>
+                <h3 id="lblSliderHint" class="sliderHint"></h3>
             </div>
         <hr>   
         <script type="text/javascript" src="lib/poverty.js"></script>
+        
         <script> 
         
         var map = L.map('map').setView([37.626, -90.75], 4);
@@ -127,7 +128,6 @@
 
 </script>
 
-        
         <div class="row">
             <div class="col-md-8">
 	        <p><b>Sources</b></p>
