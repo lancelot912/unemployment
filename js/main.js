@@ -1,176 +1,157 @@
-$(document).ready(function() {
-    
-    		var name;	
-			var map = L.map("map",
-				{center: [37.8, -96], 
-    			zoom: 4,	
-    			minZoom: 4 
-    		});
-    	
-    		L.tileLayer( 
-    			"{s}.acetate.geoiq.com/tiles/acetate/{z}/{x}/{y}.png", {
-    				attribution: "Acetate tileset from GeoIQ" 
-    			}).addTo(map);	
-    	});
-    
-$.geoJson(data/unemployed.geojson)  
-		.done(function(data) {
-			var info = processData(data);
-			createPropSymbols(info.timestamps, data);
-			createLegend(info.min,info.max);
-			createSliderUI(info.timestamps);
-	 	})
-	.fail(function() { alert('There has been a problem loading the data.')});
-    
-    function createPropSymbols(timestamps, data) {
-        			
-        		name = L.geoJson(data, {		
-        
-        			pointToLayer: function(feature, latlng) {	
-        
-        			return L.circleMarker(latlng, { 
-        				 fillColor: '#708598',
-        				 color: '#537898',
-        				 weight: 1, 
-        				 fillOpacity: 0.6 
-        				}).on({
-        
-        					mouseover: function(e) {
-        						this.openPopup();
-        						this.setStyle({color: 'yellow'});
-        					},
-        					mouseout: function(e) {
-        						this.closePopup();
-        						this.setStyle({color: '#537898'});
-        							
-        					}
-        				});
-        			}
-        		}).addTo(map);
-        
-        		updatePropSymbols(timestamps[0]);
-        
-        	}
-    
-			function updatePropSymbols(timestamp) {
-						
-						name.eachLayer(function(layer) {
-					
-								var props = layer.feature.properties;
-								var radius = calcPropRadius(props[timestamp]);
-								var popupContent = '<b>' + String(props[timestamp]) + 
-										"units</b><br>" +
-										"<i>" + props.name +
-										"</i> in </i>" +
-										timestamp + "</i>";
-					
-								layer.setRadius(radius);
-								layer.bindPopup(popupContent, { offset: new L.Point(0,-radius) });
-							});
-						}
-			function calcPropRadius(attributeValue) {
-				
-					var scaleFactor = 16;
-					var area = attributeValue * scaleFactor;
-					return Math.sqrt(area/Math.PI)*2;			
-			}
-				
+function createPropSymbols(data, map){
+	//create marker options
+	//Step 4: Determine which attribute to visualize with proportional symbols
+	var attribute = "2010";
+    var geojsonMarkerOptions = {
+        radius: 8,
+        fillColor: "#ff7800",
+        color: "#000",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+	};
+	
+};
 
-    function createLegend(min, max) {
-        	 
-        	if (min < 10) {	
-        		min = 10; 
-        	}
-        
-        		function roundNumber(inNumber) {
-        
-        				return (Math.round(inNumber/10) * 10);  
-        		}
-        
-        		var legend = L.control( { position: "bottomright" } );
-        
-        		legend.onAdd = function(map) {
-        
-				var legendContainer = L.DomUtil.create("div", "legend");
-				var symbolsContainer = L.DomUtil.create("div", "symbolsContainer");
-				var classes = [roundNumber(min), roundNumber((max-min)/2), roundNumber(max)]; 
-        		var legendCircle;  
-        		var lastRadius = 0;
-        		var currentRadius;
-        		var margin;
-					
-        
-        		L.DomEvent.addListener(legendContainer, "mousedown", function(e) { 
-        			L.DomEvent.stopPropagation(e); 
-        		});  
-        
-				$(legendContainer).append("<h2 id='legendTitle'># of somethings</h2>");
-     		
-        		for (var i = 0; i <= classes.length-1; i++) {  
-        
-					legendCircle = L.DomUtil.create("div", "legendCircle");
-					        			
-        			currentRadius = calcPropRadius(classes[i]);
-        		
-        			margin = -currentRadius - lastRadius - 2;
-        
-        			$(legendCircle).attr("style", "width: " + currentRadius*2 + 
-        				"px; height: " + currentRadius*2 + 
-        				"px; margin-left: " + margin + "px" );				
-        			$(legendCircle).append("<span class='legendValue'>"+classes[i]+"</span>");
-        
-        			$(symbolsContainer).append(legendCircle);
-        
-        			lastRadius = currentRadius;
-        
-        		}
-        
-        		$(legendContainer).append(symbolsContainer); 
-        
-        		return legendContainer; 
-        
-        		};
-        
-        		legend.addTo(map);  
-        
 
-    function createSliderUI(timestamps) {
-            
-                var sliderControl = L.control({ position: 'bottomleft'} );
-        
-                sliderControl.onAdd = function(map) {
-        
-                    var slider = L.DomUtil.create('input', 'range-slider');
-            
-                    L.DomEvent.addListener(slider, 'mousedown', function(e) { 
-                        L.DomEvent.stopPropagation(e); 
-                    });
-        
-                    $(slider)
-                        .attr({'type':'range', 
-                            'max': timestamps[timestamps.length-1], 
-                            'min': timestamps[0], 
-                            'step': 1,
-                            'value': String(timestamps[0])})
-                        .on('input change', function() {
-                        updatePropSymbols($(this).val().toString());
-                            $('.temporal-legend').text(this.value);
-                    });
-                    return slider;
-                }
-        
-                sliderControl.addTo(map)
-                createTemporalLegend(timestamps[0]); 
-    	} 
-		function createTemporalLegend(startTimestamp) {
-		
-				var temporalLegend = L.control({ position: 'bottomleft' }); 
-		
-				temporalLegend.onAdd = function(map) { 
-					var output = L.DomUtil.create('output', 'temporal-legend');
-					$(output).text(startTimestamp)
-					return output; 
-				}
-		
-				temporalLegend.addTo(map);
-			}}
+function pointToLayer(feature, latlng, attributes){
+    //Determine which attribute to visualize with proportional symbols
+    var attribute = attributes[0];
+    //check
+	console.log(attribute);
+	
+    //create marker options
+    var options = {
+        fillColor: "#ff7800",
+        color: "#000",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+
+    //For each feature, determine its value for the selected attribute
+    var attValue = Number(feature.properties[attribute]);
+
+    //Give each feature's circle marker a radius based on its attribute value
+    options.radius = calcPropRadius(attValue);
+
+    //create circle marker layer
+	var layer = L.circleMarker(latlng, options);
+	
+	var layer = L.marker(latlng, {
+        title: feature.properties.name
+    }).addTo(map);
+
+    //original popupContent changed to panelContent...Example 2.2 line 1
+    var panelContent = "<p><b>City:</b> " + feature.properties.name + "</p>";
+
+    //add formatted attribute to panel content string
+    var year = attribute.split("_")[1];
+    panelContent += "<p><b>Population in " + year + ":</b> " + feature.properties[attribute] + " million</p>";
+
+     //add city to popup content string
+	 var popupContent = "<p><b>City:</b> " + props.City + "</p>";
+
+	 //add formatted attribute to panel content string
+	 var year = attribute.split("_")[1];
+	 popupContent += "<p><b>Population in " + year + ":</b> " + props[attribute] + " million</p>";
+	
+    //replace the layer popup
+	layer.bindPopup(popupContent, {
+		offset: new L.Point(0,-radius)
+	});
+};
+    });
+
+	L.geoJson(data, {
+        pointToLayer: function (feature, latlng) {
+            //Step 5: For each feature, determine its value for the selected attribute
+            var attValue = Number(feature.properties[attribute]);
+
+            //Step 6: Give each feature's circle marker a radius based on its attribute value
+            geojsonMarkerOptions.radius = calcPropRadius(attValue);
+
+            //create circle markers
+            return L.circleMarker(latlng, geojsonMarkerOptions);
+        }
+    }).addTo(map);
+};
+
+function createSequenceControls(map){
+    //create range input element (slider)
+    $('#panel').append('<input class="range-slider" type="range">');
+};
+
+$('.skip').click(function(){
+	//get the old index value
+	var index = $('.range-slider').val();
+
+	//Step 6: increment or decrement depending on button clicked
+	if ($(this).attr('id') == 'forward'){
+		index++;
+		//Step 7: if past the last attribute, wrap around to first attribute
+		index = index > 6 ? 0 : index;
+	} else if ($(this).attr('id') == 'reverse'){
+		index--;
+		//Step 7: if past the first attribute, wrap around to last attribute
+		index = index < 0 ? 6 : index;
+	};
+
+	//Step 8: update slider
+	$('.range-slider').val(index);
+});
+
+	//Step 5: input listener for slider
+	$('.range-slider').on('input', function(){
+        //Step 6: get the new index value
+        var index = $(this).val();
+    });
+
+//Step 2: Import GeoJSON data
+function getData(map){
+    //load the data
+    $.ajax("data/unemployment.geojson", {
+        dataType: "json",
+        success: function(response){
+            //call function to create proportional symbols
+            createPropSymbols(response, map);
+        }
+    });
+};  
+
+//Called in both skip button and slider event listener handlers
+        //Step 9: pass new attribute to update symbols
+		function updatePropSymbols(map, attribute){
+			map.eachLayer(function(layer){
+				if (layer.feature && layer.feature.properties[attribute]){
+					//update the layer style and popup
+	
+	//calculate the radius of each proportional symbol
+function calcPropRadius(attValue) {
+    //scale factor to adjust symbol size evenly
+    var scaleFactor = 50;
+    //area based on attribute value and scale factor
+    var area = attValue * scaleFactor;
+    //radius calculated based on area
+    var radius = Math.sqrt(area/Math.PI);
+
+    return radius;
+};
+
+    //event listeners to open popup on hover
+    layer.on({
+        mouseover: function(){
+            this.openPopup();
+        },
+        mouseout: function(){
+            this.closePopup();
+        },
+        click: function(){
+            $("#panel").html(popupContent);
+        }
+    });
+
+    //return the circle marker to the L.geoJson pointToLayer option
+    return layer;
+};
+

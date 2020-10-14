@@ -77,7 +77,7 @@ p {
 }
 
 a {
-  color: #AA0000;
+  color: #687be6;
 }
 
 a:hover {
@@ -99,6 +99,6 @@ a:hover {
 body {
   padding-top: 50px;
   font-family: 'Georgia', serif;
-  background-color: #B3995D;
+  background-color: #bcecee;
   color: #000000;
 }
