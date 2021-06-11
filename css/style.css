@@ -1,79 +1,10 @@
-/***** NAVBAR *****/
-.navbar-default {
-  background-color: #AA0000;
-  border-radius: 0;
-  background-image: none;
-}
-
-/* Navbar title */
-.navbar-default .navbar-brand {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* Navbar hover effects */
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: #ebd122;
-}
-
-/* Navbar links */
-.navbar-default .navbar-nav > li > a {
-  color: #fff;
-  font-size: 16px;
-}
-
-/* Navbar collapsed styles */
-.navbar-header .navbar-toggle {
-  color: #fff;
-}
-
-.navbar-header .navbar-toggle:hover,
-.navbar-header .navbar-toggle:focus {
-  background-color: #ebd122;
-  color: #ebd122;
-}
-
-/*** Portfolio pieces ***/
-.portfolio-thumbnail {
-  background-color: #fff;
-  border-color: #AA0000;
-  border-width: 2px;
-  width: 95%;
-}
-
-.portfolio-thumbnail:hover {
-  border-color: #ebd122;
-}
-
-.portfolio-title {
-  font-weight: bold;
-}
-
-.portfolio-description {
-}
-
-.portfolio-image {
-}
-
-#about-world {
-  max-height: 200px;
-}
-
-.resume h3 {
-  font-weight: bold;
-}
-
 hr {
-  border-color: white;
+  border-color: rgb(92, 112, 117);
   border-width: 2px;
 }
 
 p {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 a {
@@ -81,7 +12,7 @@ a {
 }
 
 a:hover {
-  color: #ebd122;
+  color: #f1b900;
 }
 
 .jumbotron {
@@ -102,3 +33,31 @@ body {
   background-color: #bcecee;
   color: #000000;
 }
+
+.legend, .temporal-legend {
+   		padding: 6px 10px;
+    		font: 14px/16px Arial, Helvetica, sans-serif;
+   		background: white;
+    		background: rgba(255,255,255,0.8);
+    		box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    		border-radius: 5px;
+	}
+	#legendTitle {
+  	  	text-align: center;
+   	 	margin-bottom: 15px;
+   		font-variant: small-caps;
+	}
+	.symbolsContainer {
+    		float: left;
+	}
+	.legendCircle {
+     	border-radius:50%; 
+     	border: 1px solid #537898; 
+     	background: rgba(113, 133, 152, .6);
+	 	display: inline-block;
+	}
+	.legendValue {
+    		position: absolute;
+   		right: 8px;
+	}
+  

@@ -1,43 +1,103 @@
-var map = L.map('map').setView([51.505, -0.09], 13);
+<!DOCTYPE html>
+<html lang="en">
 
-//add tile layer...replace project id and accessToken with your own
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery   <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 18,
-    id: 'username.ab12cdef',
-    accessToken: 'ab.cdE1Fghijk2lmNopQR3stUv4WX5YZabcDEF6GhiJK7L8M9NopQ.rsTuVWxyZABCDEFghiJKlm'
-}).addTo(map);
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-var marker = L.marker([51.5, -0.09]).addTo(map);
+    <title>GEOG575 Lab 1: Space-time Prop Symbols Map w/ Leaflet &amp; JQuery</title>
 
-var circle = L.circle([51.508, -0.11], 500, {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5
-}).addTo(map);
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="apple-touch-icon" href="">
 
-var polygon = L.polygon([
-    [51.509, -0.08],
-    [51.503, -0.06],
-    [51.51, -0.047]
-]).addTo(map);
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-circle.bindPopup("I am a circle.");
-polygon.bindPopup("I am a polygon.");
+    <!-- Leaflet Style -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    
+	</style>
+    
+    <style>#map { width: 1000px; height: 500px; }
+        .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
+        .legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: center; margin-right: 8px; opacity: 0.7; }</style>
+        </head>
 
-var popup = L.popup()
-    .setLatLng([51.5, -0.09])
-    .setContent("I am a standalone popup.")
-    .openOn(map);
+    <!-- Custom Styles -->
+    <link rel=stylesheet href="css/range.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
 
-var popup = L.popup();
+        <hr>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="map-container">
+                    <div id="map"></div>
+                    <hr>   
+        <script type="text/javascript" src="lib/poverty.js"></script>
+        
+        <script> 
+        var map = L.map('map').setView([37.626, -90.75], 4);
+        
+        var pointStyleLarge = L.icon({
+            iconUrl: 'img/icon.png',
+            iconSize: [18, 18],
+            iconAnchor: [9, 9]
+            });
 
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(map);
-}
+        var pointStyleSmall = L.icon({
+            iconUrl: 'img/icon.png',
+            iconSize: [14, 14],
+            iconAnchor: [7, 7]
+        })
 
-map.on('click', onMapClick);
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGFuY2VsYXphcnRlIiwiYSI6ImNrcDIyZHN4bzAzZTEydm8yc24zeHNodTcifQ.ydwAELOsAYya_MiJNar3ow', {
+        maxZoom: 18,
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        id: 'mapbox/light-v9',
+        tileSize: 512,
+        zoomOffset: -1
+        }).addTo(map);
+
+        
+
+     L.geoJSON(povertyData, {
+        pointToLayer: function (feature, latlng) {
+            return L.marker(latlng, {icon: pointStyleSmall});
+        },
+        onEachFeature: onEachFeature
+    }).addTo(map);
+            
+        function onEachFeature(feature, layer) {
+            var popupContent = "";
+            if (feature.properties) {
+                for (var property in feature.properties){
+                    popupContent += "<p>" + property + ": " + feature.properties[property] + "</p>"
+                }
+            }
+    layer.bindPopup(popupContent);
+    };
+  
+
+</script>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Leaflet -->
+    <script src="js/leaflet.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
