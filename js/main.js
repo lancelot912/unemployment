@@ -10,7 +10,7 @@ var map = L.map('map').setView([37.626, -90.75], 4);
     zoomOffset: -1
     }).addTo(map);
         
-    $.ajax("data/unemployment.geojson", {
+    $.ajax("data/capitals.geojson", {
         dataType: "json",
         success: function(response){
             var attributes = processData(response);
