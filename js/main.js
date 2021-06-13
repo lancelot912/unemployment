@@ -132,7 +132,7 @@ function createSliderUI(timestamps) {
 
    // Define the labels of the time slider as an array of strings
    // Modify this for your data
-   var labels = ["2014","2015","2016","2017", "2018", "2019","2020"];
+   var labels = ["2015","2016","2017", "2018", "2019","2020"];
 
    $(slider)
        .attr({
@@ -150,7 +150,7 @@ function createSliderUI(timestamps) {
    return slider;
  }
  sliderControl.addTo(map);
- createTimeLabel("2014"); //The starting timestamp label
+ createTimeLabel("2015"); //The starting timestamp label
  }
 
 
