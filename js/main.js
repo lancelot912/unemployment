@@ -13,7 +13,7 @@ var map = L.map('map',{
     }).addTo(map);
     
  
-    $.getJSON('https://raw.githubusercontent.com/lancelot912/unemployment/main/data/unemployed_usa.geojson') 
+    $.getJSON('https://raw.githubusercontent.com/lancelot912/unemployment/main/data/unemployed_sw.geojson') 
     .done(function(data) {
     var info = processData(data);
     createPropSymbols(info.timestamps, data);
