@@ -36,8 +36,8 @@ function processData(data) {
      for (var attribute in properties) {
          if ( attribute != 'id' &&
               attribute != 'name' &&
-              attribute != 'latitude' &&
-              attribute != 'longitude' )   // != means NOT EQUAL TO
+              attribute != 'lat' &&
+              attribute != 'long' )   // != means NOT EQUAL TO
                                      // These columns are NOT recorded
                                      // Modify this part when mapping your own data
          {
