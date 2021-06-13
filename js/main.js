@@ -13,7 +13,7 @@ var map = L.map('map',{
     }).addTo(map);
     
  
-    $.getJSON('https://raw.githubusercontent.com/lancelot912/unemployment/main/data/unemployed.geojson') 
+    $.getJSON('https://raw.githubusercontent.com/lancelot912/unemployment/main/data/unemployed_usa.geojson') 
     .done(function(data) {
     var info = processData(data);
     createPropSymbols(info.timestamps, data);
@@ -113,7 +113,7 @@ function updatePropSymbols(timestamp) {
 // calculate the radius of the proportional symbols based on area
 function calcPropRadius(attributeValue) {
 
- var scaleFactor = 0.05;   // the scale factor is used to scale the values; the units of the radius are in meters
+ var scaleFactor = 200;   // the scale factor is used to scale the values; the units of the radius are in meters
                             // you may determine the scale factor accordingly based on the range of the values and the mapping scale
  var area = attributeValue * scaleFactor;
 
@@ -132,14 +132,14 @@ function createSliderUI(timestamps) {
 
    // Define the labels of the time slider as an array of strings
    // Modify this for your data
-   var labels = ["2010", "2012","2014","2016", "2018", "2019","2020"];
+   var labels = ["2014","2015","2016","2017", "2018", "2019","2020"];
 
    $(slider)
        .attr({
          'type':'range',
          'max': timestamps[timestamps.length-1],
          'min': timestamps[0],
-         'step': 2, // Change this to match the numeric interval between adjacent timestamps
+         'step': 1, // Change this to match the numeric interval between adjacent timestamps
          'value': String(timestamps[0])
        })
        .on('input change', function() {
@@ -150,7 +150,7 @@ function createSliderUI(timestamps) {
    return slider;
  }
  sliderControl.addTo(map);
- createTimeLabel("2010"); //The starting timestamp label
+ createTimeLabel("2014"); //The starting timestamp label
  }
 
 
