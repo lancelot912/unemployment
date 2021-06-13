@@ -24,8 +24,8 @@ function processData(data) {
  // First, initialize the variables to hold the timestamps and min/max population values
  var timestamps = [];  // square brackets to define an array of data
                        // because there are multiple timestamps
- var	min = Infinity; // for the min, begin with the largest possible value - infinity
- var	max = -Infinity;// for the max, begin with the smallest possible value - negative infinity
+ var min = Infinity; // for the min, begin with the largest possible value - infinity
+ var max = -Infinity;// for the max, begin with the smallest possible value - negative infinity
 
  // Go through each row/feature of the data table
  // Note data is the variable name in the function definition - processData(data)
@@ -36,8 +36,8 @@ function processData(data) {
      for (var attribute in properties) {
          if ( attribute != 'id' &&
               attribute != 'name' &&
-              attribute != 'lat' &&
-              attribute != 'long' )   // != means NOT EQUAL TO
+              attribute != 'latitude' &&
+              attribute != 'longitude' )   // != means NOT EQUAL TO
                                      // These columns are NOT recorded
                                      // Modify this part when mapping your own data
          {
@@ -67,14 +67,14 @@ function processData(data) {
 // The function to draw the proportional symbols
 function createPropSymbols(timestamps, data) {
 
- states = L.geoJson(data, {
+ cities = L.geoJson(data, {
 
      // By default, Leaflet draws geojson points as simple markers
      // To alter this, the pointToLayer function needs to be used
-     pointToLayer: function(feature, LatLong) {
-         return L.circleMarker(LatLong, { // we use circle marker for the points
-             fillColor: "#501e65",  // fill color of the circles
-             color: '#501e65',      // border color of the circles
+     pointToLayer: function(feature, latlng) {
+         return L.circleMarker(latlng, { // we use circle marker for the points
+             fillColor: "#ffcb00",  // fill color of the circles
+             color: '#ffcb00',      // border color of the circles
              weight: 2,             // circle line weight in pixels
              fillOpacity: 0.5       // fill opacity (0-1)
          }).on({
@@ -84,7 +84,7 @@ function createPropSymbols(timestamps, data) {
                },
                mouseout: function(e) {
                    this.closePopup();
-                   this.setStyle({fillColor: '#501e65'});  // fill turns original color when mouseout
+                   this.setStyle({fillColor: '#ffcb00'});  // fill turns original color when mouseout
                }
        });
      }
@@ -97,13 +97,13 @@ function createPropSymbols(timestamps, data) {
 // The function to update/resize each circle marker according to a value in the time series
 function updatePropSymbols(timestamp) {
 
- states.eachLayer(function(layer) {  // eachLayer() is an Leaflet function to iterate over the layers/points of the map
+ cities.eachLayer(function(layer) {  // eachLayer() is an Leaflet function to iterate over the layers/points of the map
 
      var props = layer.feature.properties;   // attributes
      var radius = calcPropRadius(props[timestamp]); // circle radius, calculation function defined below
 
      // pop-up information (when mouseover) for each city is also defined here
-     var popupContent = "Capital: " + ' ' + 'Unemployed: ' + String(props[timestamp]) ;
+     var popupContent = props.name + ' ' + 'Unemployed: ' + String(props[timestamp]) ;
 
      layer.setRadius(radius);  // Leaflet method for setting the radius of a circle
      layer.bindPopup(popupContent, { offset: new L.Point(0,-radius) }); // bind the popup content, with an offset
