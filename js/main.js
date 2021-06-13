@@ -1,4 +1,7 @@
-var map = L.map('map').setView([37.626, -90.75], 4);
+var map = L.map('map',{
+    center: [37.626, -90.75],
+    zoom: 4
+    });
     
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGFuY2VsYXphcnRlIiwiYSI6ImNrcDIyZHN4bzAzZTEydm8yc24zeHNodTcifQ.ydwAELOsAYya_MiJNar3ow', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -9,10 +12,9 @@ var map = L.map('map').setView([37.626, -90.75], 4);
     zoomOffset: -1,
     }).addTo(map);
     
-    
-    $.getJSON("https://raw.githubusercontent.com/lancelot912/unemployment/main/data/unemployed.geojson") 
-    // The getJSON() method is used to get JSON data
-.done(function(data){
+ 
+    $.getJSON('https://raw.githubusercontent.com/lancelot912/unemployment/main/data/unemployed.geojson') 
+    .done(function(data) {
     var info = processData(data);
     createPropSymbols(info.timestamps, data);
     createSliderUI(info.timestamps);
@@ -32,14 +34,14 @@ function processData(data) {
 
      // At each row, go through the columns/attributes to get the values
      for (var attribute in properties) {
-         if ( attribute != 'State' &&
+         if ( attribute != 'id' &&
               attribute != 'name' &&
-              attribute != 'Lat' &&
-              attribute != 'Long' )   // != means NOT EQUAL TO
+              attribute != 'lat' &&
+              attribute != 'long' )   // != means NOT EQUAL TO
                                      // These columns are NOT recorded
                                      // Modify this part when mapping your own data
          {
-             if ( $.inArray(attribute,timestamps) ===  -1) { // JQuery in.Array() method searches for a specified value within an array and return its index (or -1 if not found)
+             if ($.inArray(attribute,timestamps) ===  -1) { // JQuery in.Array() method searches for a specified value within an array and return its index (or -1 if not found)
                                                // here, the new timestamp is only added when it is not already in the array
                                                // triple equals === compares both type and value
 
@@ -65,7 +67,7 @@ function processData(data) {
 // The function to draw the proportional symbols
 function createPropSymbols(timestamps, data) {
 
- cities = L.geoJson(data, {
+ states = L.geoJson(data, {
 
      // By default, Leaflet draws geojson points as simple markers
      // To alter this, the pointToLayer function needs to be used
@@ -95,13 +97,13 @@ function createPropSymbols(timestamps, data) {
 // The function to update/resize each circle marker according to a value in the time series
 function updatePropSymbols(timestamp) {
 
- cities.eachLayer(function(layer) {  // eachLayer() is an Leaflet function to iterate over the layers/points of the map
+ states.eachLayer(function(layer) {  // eachLayer() is an Leaflet function to iterate over the layers/points of the map
 
      var props = layer.feature.properties;   // attributes
      var radius = calcPropRadius(props[timestamp]); // circle radius, calculation function defined below
 
      // pop-up information (when mouseover) for each city is also defined here
-     var popupContent = props.name + ' ' + timestamp + ' population: ' + String(props[timestamp]) ;
+     var popupContent = "Capital: " + ' ' + 'Unemployed: ' + String(props[timestamp]) ;
 
      layer.setRadius(radius);  // Leaflet method for setting the radius of a circle
      layer.bindPopup(popupContent, { offset: new L.Point(0,-radius) }); // bind the popup content, with an offset
@@ -111,7 +113,7 @@ function updatePropSymbols(timestamp) {
 // calculate the radius of the proportional symbols based on area
 function calcPropRadius(attributeValue) {
 
- var scaleFactor = 0.001;   // the scale factor is used to scale the values; the units of the radius are in meters
+ var scaleFactor = 0.05;   // the scale factor is used to scale the values; the units of the radius are in meters
                             // you may determine the scale factor accordingly based on the range of the values and the mapping scale
  var area = attributeValue * scaleFactor;
 
@@ -136,7 +138,7 @@ function createSliderUI(timestamps) {
        .attr({
          'type':'range',
          'max': timestamps[timestamps.length-1],
-         'min':timestamps[0],
+         'min': timestamps[0],
          'step': 2, // Change this to match the numeric interval between adjacent timestamps
          'value': String(timestamps[0])
        })
