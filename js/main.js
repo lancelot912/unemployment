@@ -84,7 +84,7 @@ function createPropSymbols(timestamps, data) {
                },
                mouseout: function(e) {
                    this.closePopup();
-                   this.setStyle({fillColor: '#687be6'});  // fill turns original color when mouseout
+                   this.setStyle({fillColor: '#ffcb00'});  // fill turns original color when mouseout
                }
        });
      }
