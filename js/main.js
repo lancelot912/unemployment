@@ -73,8 +73,8 @@ function createPropSymbols(timestamps, data) {
      // To alter this, the pointToLayer function needs to be used
      pointToLayer: function(feature, latlng) {
          return L.circleMarker(latlng, { // we use circle marker for the points
-             fillColor: "#687be6",  // fill color of the circles
-             color: '#ffcb00',      // border color of the circles
+             fillColor: "#ffcb00",  // fill color of the circles
+             color: '#687be6',      // border color of the circles
              weight: 2,             // circle line weight in pixels
              fillOpacity: 0.5       // fill opacity (0-1)
          }).on({
