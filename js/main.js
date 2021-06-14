@@ -73,7 +73,7 @@ function createPropSymbols(timestamps, data) {
      // To alter this, the pointToLayer function needs to be used
      pointToLayer: function(feature, latlng) {
          return L.circleMarker(latlng, { // we use circle marker for the points
-             fillColor: "#ffcb00",  // fill color of the circles
+             fillColor: "#687be6",  // fill color of the circles
              color: '#ffcb00',      // border color of the circles
              weight: 2,             // circle line weight in pixels
              fillOpacity: 0.5       // fill opacity (0-1)
@@ -84,7 +84,7 @@ function createPropSymbols(timestamps, data) {
                },
                mouseout: function(e) {
                    this.closePopup();
-                   this.setStyle({fillColor: '#ffcb00'});  // fill turns original color when mouseout
+                   this.setStyle({fillColor: '#687be6'});  // fill turns original color when mouseout
                }
        });
      }
