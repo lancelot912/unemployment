@@ -16,15 +16,20 @@ a:hover {
 }
 
 .jumbotron {
-  background-image: url("../assets/live_background.png");
   text-align: center;
   color: rgb(0, 0, 0);
   padding: 2%;
 }
 
-.jumbotron h2 {
-  font-size: 36px;
-  font-weight: bold;
+h2 {
+	margin-top: 0;
+	font-family: sans-serif;
+	font-size: 20px;
+	display: inline-block;
+	text-align: center;
+	color: #95524c;
+	line-height: 2;
+	width: 100%;
 }
 
 body {
@@ -36,28 +41,28 @@ body {
 
 .legend, .temporal-legend {
    		padding: 6px 10px;
-    		font: 14px/16px Arial, Helvetica, sans-serif;
-   		background: white;
+    		font: 12px/12px Arial, Helvetica, sans-serif;
+   		background: rgb(255, 255, 255);
     		background: rgba(255,255,255,0.8);
     		box-shadow: 0 0 15px rgba(0,0,0,0.2);
     		border-radius: 5px;
 	}
 	#legendTitle {
   	  	text-align: center;
-   	 	margin-bottom: 15px;
+   	 	margin-bottom: 10px;
    		font-variant: small-caps;
 	}
 	.symbolsContainer {
-    		float: left;
+    		float: center;
 	}
 	.legendCircle {
      	border-radius:50%; 
-     	border: 1px solid #537898; 
-     	background: rgba(113, 133, 152, .6);
+     	border: 1px solid #687be6; 
+     	background: #ffcb00;
 	 	display: inline-block;
 	}
 	.legendValue {
-    		position: absolute;
+    	position: absolute;
    		right: 8px;
 	}
   

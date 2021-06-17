@@ -20,6 +20,7 @@ var map = L.map('map',{
     var info = processData(data);
     createPropSymbols(info.timestamps, data);
     createSliderUI(info.timestamps);
+    createLegend(info.min,info.max);
 });
 
 function processData(data) {
@@ -105,7 +106,7 @@ function updatePropSymbols(timestamp) {
      var radius = calcPropRadius(props[timestamp]); // circle radius, calculation function defined below
 
      // pop-up information (when mouseover) for each city is also defined here
-     var popupContent = props.name + ' ' + 'Unemployed: ' + String(props[timestamp]) ;
+     var popupContent = props.name + ' ' + '|' + ' Unemployed: ' + String(props[timestamp]) + '%';
 
      layer.setRadius(radius);  // Leaflet method for setting the radius of a circle
      layer.bindPopup(popupContent, { offset: new L.Point(0,-radius) }); // bind the popup content, with an offset
@@ -115,12 +116,59 @@ function updatePropSymbols(timestamp) {
 // calculate the radius of the proportional symbols based on area
 function calcPropRadius(attributeValue) {
 
- var scaleFactor = 200;   // the scale factor is used to scale the values; the units of the radius are in meters
+ var scaleFactor = 300;   // the scale factor is used to scale the values; the units of the radius are in meters
                             // you may determine the scale factor accordingly based on the range of the values and the mapping scale
  var area = attributeValue * scaleFactor;
 
  return Math.sqrt(area/Math.PI);  // the function return the radius of the circle to be used in the updatePropSymbols()
 }
+
+function createLegend(min, max) {
+		 
+    if (min < 10) {	
+        min = 2; 
+    }
+
+    function roundNumber(inNumber) {
+            return (Math.round(inNumber/2) * 2);  
+    }
+
+    var legend = L.control( { position: 'bottomright' } );
+    legend.onAdd = function(map) {
+
+    var legendContainer = L.DomUtil.create('div', 'legend');  
+    var symbolsContainer = L.DomUtil.create('div', 'symbolsContainer');
+    var classes = [roundNumber(min), roundNumber((max-min)/2), roundNumber(max)]; 
+    var legendCircle;  
+    var lastRadius = 0;
+    var currentRadius;
+    var margin;
+
+    L.DomEvent.addListener(legendContainer, 'mousedown', function(e) { 
+        L.DomEvent.stopPropagation(e); 
+    });
+    $(legendContainer).append('<h2 id=’legendTitle’># of Unemployed </h2>');
+    
+    for (var i = 0; i <= classes.length-1; i++) {  
+
+        legendCircle = L.DomUtil.create('div', 'legendCircle');  
+        currentRadius = calcPropRadius(classes[i]);
+        margin = -currentRadius - lastRadius - 2;
+
+        $(legendCircle).attr('style', 'width: ' + currentRadius*2 + 
+            'px; height: ' + currentRadius*2 + 
+            'px; margin-left: ' + margin + 'px' );				
+        $(legendCircle).append('<span class=’legendValue’>'+classes[i]+'</span>');
+        $(symbolsContainer).append(legendCircle);
+        lastRadius = currentRadius;
+    }
+
+    $(legendContainer).append(symbolsContainer); 
+    return legendContainer; 
+    };
+    legend.addTo(map);  
+
+} // end createLegend();
 
 function createSliderUI(timestamps) {
  var sliderControl = L.control({ position: 'bottomleft'} ); // position of the slider
@@ -167,3 +215,6 @@ function createSliderUI(timestamps) {
    }
    temporalLegend.addTo(map);
  }
+
+
+ 
