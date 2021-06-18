@@ -11,7 +11,6 @@ var map = L.map('map',{
     tileSize: 512,
     zoomOffset: -1,
 
-    
     }).addTo(map);
     
  
@@ -125,8 +124,9 @@ function calcPropRadius(attributeValue) {
 
 function createLegend(min, max) {
 		 
-    if (min < 10) {	
-        min = 2; 
+    if (min < 5) {	
+        min = 5;
+        max = 15; 
     }
 
     function roundNumber(inNumber) {
