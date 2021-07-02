@@ -6,11 +6,92 @@ var mapboxAtt = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenSt
 var Light = L.tileLayer(mapboxUrl, {id: 'mapbox/light-v9', tileSize: 512, zoomOffset: -1, attribution: mapboxAtt}),
     Dark = L.tileLayer(mapboxUrl, {id: 'mapbox/dark-v9', tileSize: 512, zoomOffset: -1, attribution: mapboxAtt}),    
     Streets = L.tileLayer(mapboxUrl, {id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mapboxAtt});
-                    
+
 var map = L.map('map', {
-  center: [34.415, -109.022], 
-  zoom: 5,
-  layers: [Light]});    
+      zoomControl: false
+  });
+  
+  map.setView([34.415, -112.022], 5);
+  L.tileLayer(mapboxUrl, {id: 'mapbox/light-v9', tileSize: 512, zoomOffset: -1, attribution: mapboxAtt}).addTo(map);
+  
+  //Custom zoom bar control that includes a Zoom Home function
+  L.Control.zoomHome = L.Control.extend({
+      options: {
+          position: 'topleft',
+          zoomInText: '+',
+          zoomInTitle: 'Zoom In',
+          zoomOutText: '-',
+          zoomOutTitle: 'Zoom Out',
+          zoomHomeText: '<i class="fa fa-home" style="line-height:1.65;"></i>',
+          zoomHomeTitle: 'Return Home'
+      },
+  
+      onAdd: function (map) {
+          var controlName = 'gin-control-zoom',
+              container = L.DomUtil.create('div', controlName + ' leaflet-bar'),
+              options = this.options;
+  
+          this._zoomInButton = this._createButton(options.zoomInText, options.zoomInTitle,
+          controlName + '-in', container, this._zoomIn);
+          this._zoomOutButton = this._createButton(options.zoomOutText, options.zoomOutTitle,
+          controlName + '-out', container, this._zoomOut);
+          this._zoomHomeButton = this._createButton(options.zoomHomeText, options.zoomHomeTitle,
+          controlName + '-home', container, this._zoomHome);
+  
+          this._updateDisabled();
+          map.on('zoomend zoomlevelschange', this._updateDisabled, this);
+  
+          return container;
+      },
+  
+      onRemove: function (map) {
+          map.off('zoomend zoomlevelschange', this._updateDisabled, this);
+      },
+  
+      _zoomIn: function (e) {
+          this._map.zoomIn(e.shiftKey ? 3 : 1);
+      },
+  
+      _zoomOut: function (e) {
+          this._map.zoomOut(e.shiftKey ? 3 : 1);
+      },
+  
+      _zoomHome: function (e) {
+          map.setView([34.415, -112.022], 5);
+      },
+  
+      _createButton: function (html, title, className, container, fn) {
+          var link = L.DomUtil.create('a', className, container);
+          link.innerHTML = html;
+          link.href = '#';
+          link.title = title;
+  
+          L.DomEvent.on(link, 'mousedown dblclick', L.DomEvent.stopPropagation)
+              .on(link, 'click', L.DomEvent.stop)
+              .on(link, 'click', fn, this)
+              .on(link, 'click', this._refocusOnMap, this);
+  
+          return link;
+      },
+  
+      _updateDisabled: function () {
+          var map = this._map,
+              className = 'leaflet-disabled';
+  
+          L.DomUtil.removeClass(this._zoomInButton, className);
+          L.DomUtil.removeClass(this._zoomOutButton, className);
+  
+          if (map._zoom === map.getMinZoom()) {
+              L.DomUtil.addClass(this._zoomOutButton, className);
+          }
+          if (map._zoom === map.getMaxZoom()) {
+              L.DomUtil.addClass(this._zoomInButton, className);
+          }
+      }
+  });
+  // Add the new control to the map
+  var zoomHome = new L.Control.zoomHome();
+  zoomHome.addTo(map);
 
 var baseLayers = {
   "Light": Light,
@@ -18,7 +99,7 @@ var baseLayers = {
   "Streets": Streets};
 
 L.control.layers(baseLayers).addTo(map);
-
+  
 //Call getData function
   getData(map);
     
@@ -334,3 +415,420 @@ function createSequenceControls(map, attributes) {
     updatePropSymbols(map, attributes[index]);
   });
 }
+
+var southwest = {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -124.2059326171875,
+              41.9942015603157
+            ],
+            [
+              -111.02783203125,
+              42.032974332441405
+            ],
+            [
+              -111.0498046875,
+              40.96330795307353
+            ],
+            [
+              -102.01904296874999,
+              41.04621681452063
+            ],
+            [
+              -102.01904296874999,
+              37.020098201368114
+            ],
+            [
+              -94.59228515625,
+              36.98500309285596
+            ],
+            [
+              -94.5703125,
+              36.43896124085945
+            ],
+            [
+              -94.3505859375,
+              35.44277092585766
+            ],
+            [
+              -94.482421875,
+              33.65120829920497
+            ],
+            [
+              -93.97705078125,
+              33.55970664841198
+            ],
+            [
+              -94.06494140625,
+              31.98944183792288
+            ],
+            [
+              -93.4716796875,
+              31.034108344903512
+            ],
+            [
+              -93.75732421875,
+              30.50548389892728
+            ],
+            [
+              -93.71337890625,
+              30.183121842195515
+            ],
+            [
+              -93.80126953124999,
+              29.707139348134145
+            ],
+            [
+              -94.68017578125,
+              29.49698759653577
+            ],
+            [
+              -95.11962890625,
+              29.152161283318915
+            ],
+            [
+              -95.4052734375,
+              28.844673680771795
+            ],
+            [
+              -96.43798828125,
+              28.362401735238237
+            ],
+            [
+              -97.119140625,
+              27.664068965384516
+            ],
+            [
+              -97.36083984375,
+              27.293689224852407
+            ],
+            [
+              -97.36083984375,
+              26.686729520004036
+            ],
+            [
+              -97.0751953125,
+              25.97779895546436
+            ],
+            [
+              -97.44873046875,
+              25.878994400196202
+            ],
+            [
+              -97.9541015625,
+              26.03704188651584
+            ],
+            [
+              -98.98681640625,
+              26.352497858154024
+            ],
+            [
+              -99.6240234375,
+              27.371767300523047
+            ],
+            [
+              -100.39306640625,
+              28.459033019728043
+            ],
+            [
+              -101.09619140625,
+              29.477861195816843
+            ],
+            [
+              -101.4697265625,
+              29.80251790576445
+            ],
+            [
+              -102.32666015625,
+              29.878755346037977
+            ],
+            [
+              -102.67822265625,
+              29.707139348134145
+            ],
+            [
+              -102.919921875,
+              29.19053283229458
+            ],
+            [
+              -103.11767578124999,
+              28.97931203672246
+            ],
+            [
+              -104.21630859375,
+              29.420460341013133
+            ],
+            [
+              -104.6337890625,
+              29.7453016622136
+            ],
+            [
+              -104.69970703125,
+              29.99300228455108
+            ],
+            [
+              -104.69970703125,
+              30.240086360983426
+            ],
+            [
+              -104.9853515625,
+              30.56226095049944
+            ],
+            [
+              -105.2490234375,
+              30.80791068136646
+            ],
+            [
+              -106.19384765625,
+              31.522361470421437
+            ],
+            [
+              -106.5234375,
+              31.74685416292141
+            ],
+            [
+              -108.19335937499999,
+              31.765537409484374
+            ],
+            [
+              -108.21533203125,
+              31.3348710339506
+            ],
+            [
+              -110.98388671874999,
+              31.316101383495624
+            ],
+            [
+              -114.85107421875,
+              32.491230287947594
+            ],
+            [
+              -114.76318359375,
+              32.713355353177555
+            ],
+            [
+              -117.22412109375,
+              32.54681317351514
+            ],
+            [
+              -117.2900390625,
+              32.91648534731439
+            ],
+            [
+              -117.66357421875,
+              33.41310221370827
+            ],
+            [
+              -118.10302734374999,
+              33.669496972795535
+            ],
+            [
+              -118.3447265625,
+              33.687781758439364
+            ],
+            [
+              -118.5205078125,
+              33.5963189611327
+            ],
+            [
+              -118.47656249999999,
+              33.779147331286474
+            ],
+            [
+              -118.45458984375,
+              33.90689555128866
+            ],
+            [
+              -118.58642578124999,
+              33.99802726234877
+            ],
+            [
+              -118.828125,
+              34.03445260967645
+            ],
+            [
+              -119.267578125,
+              34.10725639663118
+            ],
+            [
+              -119.35546875000001,
+              34.21634468843463
+            ],
+            [
+              -119.64111328125,
+              34.34343606848294
+            ],
+            [
+              -120.38818359375,
+              34.379712580462204
+            ],
+            [
+              -120.65185546875,
+              34.56085936708384
+            ],
+            [
+              -120.673828125,
+              34.831841149828655
+            ],
+            [
+              -120.76171875,
+              35.08395557927643
+            ],
+            [
+              -120.95947265624999,
+              35.263561862152095
+            ],
+            [
+              -121.06933593749999,
+              35.44277092585766
+            ],
+            [
+              -121.4208984375,
+              35.817813158696616
+            ],
+            [
+              -121.77246093750001,
+              36.08462129606931
+            ],
+            [
+              -122.03613281249999,
+              36.43896124085945
+            ],
+            [
+              -122.2119140625,
+              36.89719446989036
+            ],
+            [
+              -122.431640625,
+              37.21283151445594
+            ],
+            [
+              -122.51953124999999,
+              37.54457732085582
+            ],
+            [
+              -122.78320312499999,
+              37.85750715625203
+            ],
+            [
+              -123.0908203125,
+              38.151837403006766
+            ],
+            [
+              -123.26660156249999,
+              38.42777351132902
+            ],
+            [
+              -123.70605468750001,
+              38.788345355085625
+            ],
+            [
+              -123.8818359375,
+              39.06184913429154
+            ],
+            [
+              -123.90380859374999,
+              39.38526381099774
+            ],
+            [
+              -123.837890625,
+              39.605688178320804
+            ],
+            [
+              -123.99169921875,
+              39.8928799002948
+            ],
+            [
+              -124.18945312500001,
+              40.07807142745009
+            ],
+            [
+              -124.47509765625,
+              40.27952566881291
+            ],
+            [
+              -124.47509765625,
+              40.53050177574321
+            ],
+            [
+              -124.34326171874999,
+              40.66397287638688
+            ],
+            [
+              -124.21142578125,
+              40.88029480552824
+            ],
+            [
+              -124.1455078125,
+              41.0130657870063
+            ],
+            [
+              -124.1949462890625,
+              41.104190944576466
+            ],
+            [
+              -124.15649414062499,
+              41.18692242290296
+            ],
+            [
+              -124.134521484375,
+              41.30257109430557
+            ],
+            [
+              -124.1015625,
+              41.44272637767212
+            ],
+            [
+              -124.1180419921875,
+              41.59490508367679
+            ],
+            [
+              -124.18945312500001,
+              41.68932225997044
+            ],
+            [
+              -124.26086425781249,
+              41.75492216766298
+            ],
+            [
+              -124.26086425781249,
+              41.84910468610387
+            ],
+            [
+              -124.21279907226562,
+              41.94263801258577
+            ],
+            [
+              -124.21623229980467,
+              41.95846888718632
+            ],
+            [
+              -124.20902252197264,
+              41.978634788827435
+            ],
+            [
+              -124.21211242675781,
+              41.98986366231382
+            ],
+            [
+              -124.21005249023438,
+              41.99394639802862
+            ],
+            [
+              -124.20284271240234,
+              41.994456721579816
+            ]
+          ]
+        }
+      }
+    ]
+  }
+
+L.geoJSON(southwest).addTo(map);
