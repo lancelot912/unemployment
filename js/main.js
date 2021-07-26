@@ -106,7 +106,7 @@ L.control.layers(baseLayers).addTo(map);
 //Import GeoJSON data
 function getData(map) {
   //Load the data
-  $.ajax('https://raw.githubusercontent.com/lancelot912/unemployment/main/data/unemployed_sw_year.geojson', {
+  $.ajax('data/unemployed_sw_year.geojson', {
     dataType: 'json',
     success: function (response) {
       //Create an attributes array
